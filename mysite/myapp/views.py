@@ -8,4 +8,4 @@ def save_profile(request):
 
 def resume(request,id):
     user_profile = Profile.objects.get(id=id)
-    return render("myapp/resume.html"{"user_profile":user_profile})
+    return render(request,"myapp/resume.html", {"user_profile":user_profile})

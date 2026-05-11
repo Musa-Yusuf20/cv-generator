@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from myapp.models import Profile
 
 # Create your views here.
@@ -22,6 +22,7 @@ def save_profile(request):
         skills = request.POST.get("skills")
         profile = Profile(name=name,email=email,number=number,degree=degree,school=school,university=university,summary=summary,previous_work=previous_work,skills=skills,profile=profile)
         profile.save()
+        return redirect("dashbord")
     return render(request,"myapp/accept.html")
 
 

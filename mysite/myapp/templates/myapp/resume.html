@@ -9,14 +9,14 @@
         >
         <!-- Header section starts here -->
          <div class="text-center mb-8">
-            <h1 class="text-4xl front-bold text-gray-800">{{user_profile.name}}</h1>
+            <h1 class="text-4xl font-bold text-gray-800">{{ user_profile.name }}</h1>
             <p class="text-lg text-gray-600">{{user_profile.email}} | {{user_profile.number}}</p>
          </div>
         <!-- Header section ends here -->
         
         <!-- Education section begins here -->
         <div class="border-b pb-4 mb-6">
-            <h2 class="-2xl font-semibold text-gray-800 mb-2">Education</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Education</h2>
             <p> <span class="font-semibold">Degree:</span> {{user_profile.degree}}</p>
             <p> <span class="font-semibold">School:</span> {{user_profile.school}}</p>
             <p> <span class="font-semibold">University:</span> {{user_profile.university}}</p>
@@ -25,29 +25,30 @@
         
         <!-- Summary section begins here -->
         <div class="border-b pb-4 mb-6">
-            <h2 class="-2xl font-semibold text-gray-800 mb-2">Proffesional Summary</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Proffessional Summary</h2>
             <p class="text-gray-700 leading-relaxed">{{user_profile.summary}}</p>
         </div>
         <!-- Summary section ends here -->
         
-        <!-- Work Experiance section begins here -->
+        <!-- Work Experience section begins here -->
         <div class="border-b pb-4 mb-6">
-            <h2 class="-2xl font-semibold text-gray-800 mb-2">Work Experiance</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Work Experience</h2>
             <p class="text-gray-700 leading-relaxed">{{user_profile.previous_work}}</p>
         </div>
-        <!-- Work Experiance section ends here -->
+        <!-- Work Experience section ends here -->
 
         <!-- Skills section begins here -->
         <div class="border-b pb-4 mb-6">
-            <h2 class="-2xl font-semibold text-gray-800 mb-2">Skills</h2>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Skills</h2>
             <p class="text-gray-700 leading-relaxed">{{user_profile.skills}}</p>
         </div>
         <!-- Skills section ends here -->
         
         <!-- Print and back button section starts here -->
         <div class="text-center"> 
-            <button class="bg-blue-600 text-white- px-6 py-2 rounded-md shadow"> Print CV</button>
-            <a class="bg-grey-600 text-white- px-6 py-2 rounded-md shadow" href="">Back To Home</a>
+            <button onclick="window.print()" class="bg-blue-600 text-white px-6 py-2 rounded-md shadow"> Print CV</button>
+            <a class="bg-gray-600 text-white px-6 py-2 rounded-md shadow" href="{% url 'download_resume' user_profile.id %}">Download Resume</a>
+            <a class="bg-gray-600 text-white px-6 py-2 rounded-md shadow" href="">Back To Home</a>
         </div>
         <!-- Print and back button section ends here -->
 
@@ -55,27 +56,5 @@
         </div>
 
     </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
